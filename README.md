@@ -1,6 +1,6 @@
 # Suricata-IDS-Lab
 Lab demonstrating IDS  
-# Suricata IDS Lab
+# Suricata(Ubuntu)/Windows/Kali IDS Lab
 
 **Small isolated lab** demonstrating Suricata IDS/IPS monitoring with an Ubuntu sensor (dual-NIC), a Kali attacker, and a Windows victim. This repo includes configuration snippets, test rules, scripts, and a network diagram.
 
