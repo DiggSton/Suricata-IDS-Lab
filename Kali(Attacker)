@@ -35,3 +35,9 @@ EOF
 
 echo "Running hydra (small test)..."
 hydra -l $USER -P $WORDLIST ssh://$VICTIM -t 4
+
+# Kali Attacker Notes
+
+- Ensure `nmap`, `hydra`, `netcat` are installed: `sudo apt install -y nmap hydra netcat`
+- Use small wordlists for demonstration to avoid lengthy runs: see hydra-test.sh
+- Only run tests in isolated lab; do not run hydra or scans against Internet hosts.
