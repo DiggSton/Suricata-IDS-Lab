@@ -1,12 +1,12 @@
 Lab Network Plan (Host-only VMnets)
 
 - VMnet2 (Kali <-> Ubuntu):
-  - Gateway (Ubuntu ens33): 192.xxx.xxx.xxx
-  - Kali attacker: 192.xxx.xxx.xxx
+  - Gateway (Ubuntu ens33): xxx.xxx.xxx.xxx
+  - Kali attacker: xxx.xxx.xxx.xxx
 
 - VMnet3 (Ubuntu <-> Windows):
-  - Gateway (Ubuntu ens37): 192.xxx.xxx.xxx
-  - Windows victim: 192.xxx.xxx.xxx
+  - Gateway (Ubuntu ens37): xxx.xxx.xxx.xxx
+  - Windows victim: xxx.xxx.xxx.xxx
 
 Notes:
 - Ensure VMnet2 and VMnet3 are host-only or isolated in VMware.
@@ -15,20 +15,20 @@ Notes:
 # Interface Map
 
 - Ubuntu (Suricata)
-  - ens33 -> VMnet2 -> Kali -> 192.xxx.xxx.xxx
-  - ens37 -> VMnet3 -> Windows -> 192.xxx.xxx.xxx
+  - ens33 -> VMnet2 -> Kali -> xxx.xxx.xxx.xxx
+  - ens37 -> VMnet3 -> Windows -> xxx.xxx.xxx.xxx
 
 - Kali (Attacker)
-  - eth0/ensX -> VMnet2 -> 192.xxx.xxx.xxx
+  - eth0/ensX -> VMnet2 -> xxx.xxx.xxx.xxx
 
 - Windows (Victim)
-  - Ethernet adapter -> VMnet3 -> 192.xxx.xxx.xxx
+  - Ethernet adapter -> VMnet3 -> xxx.xxx.xxx.xxx
 
 # Network configuration examples
 
 ## Kali (nmcli example)
-sudo nmcli con add type ethernet ifname eth0 con-name lab-static ipv4.addresses 192.xxx.xxx.xxx/24 ipv4.gateway 192.xxx.xxx.xxx ipv4.method manual
+sudo nmcli con add type ethernet ifname eth0 con-name lab-static ipv4.addresses xxx.xxx.xxx.xxx/24 ipv4.gateway xxx.xxx.xxx.xxx ipv4.method manual
 
 ## Windows (static IPv4 example)
-- Use the Windows VM's network adapter settings or PowerShell/Netsh to set IPv4 address 192.xxx.xxx.xxx/24 with gateway 192.xxx.xxx.xxx.
+- Use the Windows VM's network adapter settings or PowerShell/Netsh to set IPv4 address xxx.xxx.xxx.xxx/24 with gateway xxx.xxx.xxx.xxx.
 
