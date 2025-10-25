@@ -3,8 +3,8 @@
 This file contains step-by-step instructions to configure the three VMs used in this lab.
 
 ## Network plan (example)
-- VMnet2: Kali <-> Ubuntu (attacker subnet) — 192.168.XX.XX/24
-- VMnet3: Ubuntu <-> Windows (victim subnet) — 192.168.XX.XX/24
+- VMnet2: Kali <-> Ubuntu (attacker subnet) — xx.xx.XX.XX/24
+- VMnet3: Ubuntu <-> Windows (victim subnet) — xx.xx.XX.XX/24
 
 ## Ubuntu (Suricata) Setup Summary
 1. Ensure Ubuntu VM has two NICs: one connected to VMnet2 and one to VMnet3.
@@ -19,12 +19,12 @@ This file contains step-by-step instructions to configure the three VMs used in 
 7.	sudo systemctl restart suricata
 8.	sudo systemctl status suricata
 Kali (Attacker) Setup Summary
-1.	Configure static IP or use DHCP on VMnet2: 192.168.XX.XX/24 gateway 192.168.XX.XX.
+1.	Configure static IP or use DHCP on VMnet2: xx.xx.XX.XX/24 gateway xx.xx.XX.XX.
 2.	Install required tools:
 3.	sudo apt update
 4.	sudo apt install -y nmap hydra wordlists netcat
 Windows (Victim) Setup Summary
-1.	Assign static IP on VMnet3: 192.168.XX.XX/24.
+1.	Assign static IP on VMnet3: xx.xx.XX.XX/24.
 2.	Enable RDP (or install OpenSSH) for test services (see scripts in windows-victim/).
 3.	Create test accounts for brute-force tests:
 4.	net user testuser Password123! /add
